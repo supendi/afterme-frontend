@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './index.module.css'
 
 export interface SimpleLayourProps {
     children: React.ReactNode
@@ -6,10 +7,9 @@ export interface SimpleLayourProps {
 
 function SimpleLayout({ children }: SimpleLayourProps) {
     return (
-        <>
-            hellow from simple layout
+        <div className={styles.container}>
             {children}
-        </>
+        </div>
     )
 }
 

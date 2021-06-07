@@ -3,6 +3,7 @@ import './App.css';
 import { Switch, Route, Redirect, Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import Home from '@pages/Home';
+import SimpleLayout from '@layouts/SimpleLayout';
 
 const browserHistory = createBrowserHistory();
 
@@ -10,11 +11,14 @@ function App() {
   return (
     <Router history={browserHistory}>
       <Switch>
-        <Route
-          component={Home}
-          exact
-          path="/home"
-        />
+        <SimpleLayout>
+          <Route
+            component={Home}
+            exact
+            path="/home"
+          />
+        </SimpleLayout>
+
         <Redirect to="/home" />
       </Switch>
     </Router>

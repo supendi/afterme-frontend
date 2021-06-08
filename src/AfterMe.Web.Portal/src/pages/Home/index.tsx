@@ -1,5 +1,12 @@
 import React from 'react'
 import styles from './index.module.css'
+import {
+    Card,
+    CardHeader,
+    CardTitle,
+    CardBody
+} from "@progress/kendo-react-layout";
+import { Button } from "@components/Button";
 
 function HomePage() {
     return (
@@ -10,20 +17,32 @@ function HomePage() {
                     <p className={styles.subtitle}>Leave message for loved ones once you've passed away </p>
                 </div>
                 <div className={styles.buttonContainer}>
-                    <button>Sign Up Free</button>
+                    <Button
+                        className={styles.btn}
+                        primary={true}
+                    >
+                        Sign Up Free
+                    </Button>
                 </div>
             </div>
 
             <div className={styles.content}>
-                <div className={styles.card}>
-                    <h3>The AfterMe Network</h3>
-                    <input
-                        type="text"
-                        placeholder="Search"
-                        className={styles.inputSearch}
-                    >
-                    </input>
-                </div>
+                <Card className={styles.card}>
+                    <CardHeader>
+                        <CardTitle className={styles.cardTitle}>
+                            The AfterMe Networks
+                        </CardTitle>
+                    </CardHeader>
+                    <CardBody>
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            className={styles.inputSearch}
+                        >
+                        </input>
+                    </CardBody>
+
+                </Card>
             </div>
 
             <div className={styles.footer}>

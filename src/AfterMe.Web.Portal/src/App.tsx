@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react' 
+import "@progress/kendo-theme-bootstrap/dist/all.css";
+import '@progress/kendo-theme-default/dist/all.css';
 import './App.css';
+import './AfterMe.scss';
 import { Switch, Route, Redirect, Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import Home from '@pages/Home';
 import SimpleLayout from '@layouts/SimpleLayout';
+import SignInPage from '@pages/SignIn';
 
 const browserHistory = createBrowserHistory();
 
@@ -16,6 +20,11 @@ function App() {
             component={Home}
             exact
             path="/home"
+          />
+          <Route
+            component={SignInPage}
+            exact
+            path="/signin"
           />
         </SimpleLayout>
 

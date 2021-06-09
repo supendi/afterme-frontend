@@ -1,23 +1,30 @@
 import React from 'react'
-import styles from './index.module.css'
+import '@scss/layout/login.scss'
+import { Input } from '@progress/kendo-react-inputs'
 
 function SignInPage() {
     return (
-        <div className={styles.container}>
-            <div className={styles.leftContainer}>
-                <h1 className={styles.title}>AfterMe</h1>
+        <div className={"Login"}>
+            <div className={"Login-left"}>
+                <h1>After Me</h1>
             </div>
-
-            <div className={styles.rightContainer}>
-
+            <div className={"Login-right"}>
                 <div>
                     <h3>Sign in</h3>
-                    <input
-                        type="text"
-                        placeholder="Email Address"
-                        className={styles.inputSearch}
-                    >
-                    </input>
+                    <div>
+                        <Input
+                            type="text"
+                            placeholder="Email Address"
+                        >
+                        </Input>
+                    </div>
+                    <div>
+                        <Input
+                            type="text"
+                            placeholder="Password"
+                        >
+                        </Input>
+                    </div>
                 </div>
             </div>
         </div>
